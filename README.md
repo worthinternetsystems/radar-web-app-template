@@ -15,3 +15,4 @@ I want to take a look at what it takes to really build a modern, performant web 
 - [Assumptions](blog/00-assumptions.md)
 - [What am I building?](blog/01-whatAmIBuilding.md)
 - [Getting started](blog/02-gettingStarted.md)
+- [Domain design](blog/03-domainDesign.md)
