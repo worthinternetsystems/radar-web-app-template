@@ -8,7 +8,11 @@ To start I run
 npx create-nx-workspace radar-web-app-template --packageManager=pnpm
 ```
 
-I keep most of the default settings but selected empty project. I'll add libraries and applications manually.
+I keep most of the default settings but selected empty project. I'll add libraries and applications manually. I opted to use GitHub as my build pipeline. I have heard great things about GitLabs, but I know almost nothing about it. Maybe it will be something to migrate to some point down the line. For now GitHub Actions should be entirely sufficient.
+
+Let's take a look around, what did we get?
+
+First we have a GitHub action yml file. This does some basic setup and then runs some tests. There is a recommended extensions json file in the `.vscode` folder. It only contains the Nx extension for Angular, and as I won't be using Angular I won't be installing it. There is a `.gitignore`, nothing special, just some good defaults. We've got an empty `packages` folder as well as a `pnpm-workspace.yaml` file that tells pnpm that our packages are in the `packages` folder. I will probably add an `applications` folder at some point going forward and update the workspaces folder. We've got a `packages.json` folder, just some defaults for now, and also a `README.md` with nothing yet.
 
 ## A quick aside
 
@@ -16,4 +20,4 @@ You might be thinking "This guy wants to build the most scalable, maintainable, 
 
 What makes this more defensible IMO is that Nx isn't just a javscript/typescript tool. It has support and generators for coordinating a polyglot mono-repo (supposedly). I am looking fowrard to seeing how possible it will be to add in more robust languages for other parts of this project. Or maybe this will be the first of my many mistakes, we'll see...
 
-// TODO: first package, getting github things setup, conventional commit, commit hooks
+// TODO: first package, getting github things setup, conventional commit, commit hooks, Nx Cloud
